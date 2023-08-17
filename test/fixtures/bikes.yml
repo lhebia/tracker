@@ -1,11 +1,19 @@
-# Fixture test data for the application
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-first:
-  name: My specialized bike
+one:
+  name: MyString
+  make: MyString
+  model: MyString
+  description: MyText
+  serial_number: MyString
+  user_id: 1
+  year: 1
 
-second:
-  name: My cervelo bike
-
-third:
-  name: My cannondale
-  
+two:
+  name: MyString
+  make: MyString
+  model: MyString
+  description: MyText
+  serial_number: MyString
+  user_id: 1
+  year: 1

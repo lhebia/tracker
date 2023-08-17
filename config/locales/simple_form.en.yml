@@ -1,0 +1,14 @@
+en:
+  simple_form:
+    placeholders:
+      bike:
+        name: Name of your bike
+    labels:
+      bike:
+        name: Name
+
+  helpers:
+    submit:
+      bike:
+        create: Create bike
+        update: Update bike

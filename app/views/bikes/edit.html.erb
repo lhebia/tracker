@@ -1,0 +1,9 @@
+<main class="container">
+  <%= link_to sanitize("&larr; Back to bike"), bike_path(@bike) %>
+
+  <div class="header">
+    <h1>Edit bike</h1>
+  </div>
+
+  <%= render "form", bike: @bike %>
+</main>

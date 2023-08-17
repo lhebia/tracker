@@ -1,0 +1,10 @@
+<main class="container">
+  <div class="header">
+    <h1>Bikes</h1>
+    <%= link_to "New bike",
+      new_bike_path,
+      class: "btn btn--primary" %>
+  </div>
+
+  <%= render @bikes %>
+</main>

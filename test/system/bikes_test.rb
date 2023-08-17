@@ -9,7 +9,7 @@ class BikesTest < ApplicationSystemTestCase
     # When we visit the bikes#index page
     # we expect to see a title with the text "bikes"
     visit bikes_path
-    assert_selector "h1", text: "bikes"
+    assert_selector "h1", text: "Bikes"
 
     # When we click on the link with the text "New bike"
     # we expect to land on a page with the title "New bike"
@@ -23,7 +23,7 @@ class BikesTest < ApplicationSystemTestCase
 
     # We expect to be back on the page with the title "bikes"
     # and to see our "Capybara bike" added to the list
-    assert_selector "h1", text: "bikes"
+    assert_selector "h1", text: "Bikes"
     assert_text "Capybara bike"
   end
 
@@ -36,7 +36,7 @@ class BikesTest < ApplicationSystemTestCase
 
   test "Updating a bike" do
     visit bikes_path
-    assert_selector "h1", text: "bikes"
+    assert_selector "h1", text: "Bikes"
 
     click_on "Edit", match: :first
     assert_selector "h1", text: "Edit bike"
@@ -44,7 +44,7 @@ class BikesTest < ApplicationSystemTestCase
     fill_in "Name", with: "Updated bike"
     click_on "Update bike"
 
-    assert_selector "h1", text: "bikes"
+    assert_selector "h1", text: "Bikes"
     assert_text "Updated bike"
   end
 

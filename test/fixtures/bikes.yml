@@ -1,19 +1,19 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  make: MyString
-  model: MyString
-  description: MyText
-  serial_number: MyString
+first:
+  name: First Bike
+  make: First Make
+  model: First Model
+  description: First Description
+  serial_number: First Serial Number
   user_id: 1
   year: 1
 
-two:
-  name: MyString
-  make: MyString
-  model: MyString
-  description: MyText
-  serial_number: MyString
-  user_id: 1
-  year: 1
+second:
+  name: Bike
+  make: Make
+  model: Model
+  description: Description
+  serial_number: Serial Number
+  user_id: 2
+  year: 2

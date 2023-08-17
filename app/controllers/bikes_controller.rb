@@ -18,7 +18,7 @@ class BikesController < ApplicationController
     if @bike.save
       redirect_to bikes_path, notice: "Bike was successfully created."
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
@@ -29,7 +29,7 @@ class BikesController < ApplicationController
     if @bike.update(bike_params)
       redirect_to bikes_path, notice: "Bike was successfully updated."
     else
-      render :edit
+      render :edit, status: :unprocessable_entity
     end
   end
 

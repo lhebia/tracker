@@ -1,19 +1,28 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 first:
-  name: First Bike
-  make: First Make
-  model: First Model
-  description: First Description
-  serial_number: First Serial Number
-  user_id: 1
-  year: 1
+  name: Neo
+  make: Specialized
+  model: Tarmac SL7
+  description: One bike to rule them all
+  serial_number: 1
+  user_id: nil
+  year: 2023
 
 second:
-  name: Bike
-  make: Make
-  model: Model
-  description: Description
-  serial_number: Serial Number
-  user_id: 2
-  year: 2
+  name: Caaderific
+  make: Cannondale
+  model: CAAD10
+  description: Something something bike
+  serial_number: 2
+  user_id: nil
+  year: 2010
+
+third:
+  name: Dream bike
+  make: Cervelo
+  model: Soloist
+  description: Do it all race bike
+  serial_number: 3
+  user_id: nil
+  year: 2023

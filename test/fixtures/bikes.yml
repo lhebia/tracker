@@ -1,0 +1,11 @@
+# Fixture test data for the application
+
+first:
+  name: My specialized bike
+
+second:
+  name: My cervelo bike
+
+third:
+  name: My cannondale
+  

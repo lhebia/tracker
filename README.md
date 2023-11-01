@@ -7,4 +7,7 @@ To setup server and create database.
 To start environment
 - `bin/dev`
 
+To run tests
+- `bin/rails test`
+
 Project is running at: http://localhost:3000/

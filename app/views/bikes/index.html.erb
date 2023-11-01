@@ -3,8 +3,13 @@
     <h1>Bikes</h1>
     <%= link_to "New bike",
       new_bike_path,
-      class: "btn btn--primary" %>
+      class: "btn btn--primary",
+      data: { turbo_frame: dom_id(Bike.new) } %>
   </div>
 
-  <%= render @bikes %>
+  <%= turbo_frame_tag Bike.new %>
+
+  <%= turbo_frame_tag "bikes" do %>
+    <%= render @bikes %>
+  <% end %>
 </main>

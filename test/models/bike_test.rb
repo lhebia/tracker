@@ -19,7 +19,7 @@ class BikesTest < ApplicationSystemTestCase
     click_on "New bike"
     fill_in "Name", with: "Capybara bike"
 
-    assert_selector "h1", text: "New bike"
+    assert_selector "h1", text: "Bikes"
     click_on "Create bike"
 
     assert_selector "h1", text: "Bikes"
@@ -33,7 +33,7 @@ class BikesTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
     fill_in "Name", with: "Updated bike"
 
-    assert_selector "h1", text: "Edit bike"
+    assert_selector "h1", text: "Bikes"
     click_on "Update bike"
 
     assert_selector "h1", text: "Bikes"

@@ -2,7 +2,7 @@ require "application_system_test_case"
 
 class BikesTest < ApplicationSystemTestCase
   setup do
-    @bike = bikes(:first)
+    @bike = Bike.ordered.first
   end
 
   test "Showing a bike" do

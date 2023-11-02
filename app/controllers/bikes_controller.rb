@@ -2,7 +2,7 @@ class BikesController < ApplicationController
     before_action :set_bike, only: [:show, :edit, :update, :destroy]
 
   def index
-    @bikes = Bike.ordered
+    @bikes = Bike.for_user(current_user).ordered
   end
 
   def show
@@ -14,6 +14,7 @@ class BikesController < ApplicationController
 
   def create
     @bike = Bike.new(bike_params)
+    @bike.user = current_user
 
     if @bike.save
       respond_to do |format|
@@ -46,7 +47,7 @@ class BikesController < ApplicationController
   private
 
   def set_bike
-    @bike = Bike.find(params[:id])
+    @bike = Bike.for_user(current_user).find(params[:id])
   end
 
   def bike_params

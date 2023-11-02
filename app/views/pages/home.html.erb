@@ -1,0 +1,10 @@
+<main class="container">
+  <h1>Veloholic</h1>
+  <p>Velo addicts unite and share their passion</p>
+
+  <% if user_signed_in? %>
+    <%= link_to "View quotes", bikes_path, class: "btn btn--dark" %>
+  <% else %>
+    <%= link_to "Sign in", new_user_session_path, class: "btn btn--dark" %>
+  <% end %>
+</main>

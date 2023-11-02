@@ -3,6 +3,9 @@ class Bike < ApplicationRecord
   
   validates :name, presence: true
 
+  validates :year, format: { with: /\A(19|20)\d{2}\z/,
+    message: 'Must be a valid year' }
+
   scope :ordered, -> { order(id: :desc) }
 
   scope :for_user, -> (user) { where(user_id: user.id) }

@@ -1,4 +1,0 @@
-<%= turbo_stream.prepend "bikes" do %>
-  <%= render partial: "bikes/bike", locals: { bike: @bike } %>
-<% end %>
-<%= turbo_stream.update Bike.new, "" %>

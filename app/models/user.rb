@@ -4,4 +4,6 @@ class User < ApplicationRecord
   # :registerable,:recoverable, :rememberable
 
   devise :database_authenticatable,:validatable
+
+  has_many :bikes
 end

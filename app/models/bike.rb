@@ -1,4 +1,6 @@
 class Bike < ApplicationRecord
+  belongs_to :users
+  
   validates :name, presence: true
 
   scope :ordered, -> { order(id: :desc) }

@@ -1,10 +1,14 @@
-<%= simple_form_for bike, html: { class: "bike form" } do |f| %>
+<%= simple_form_for bike, html: { class: "form", id: "bike-form" } do |f| %>
   <% if bike.errors.any? %>
     <div class="error-message">
       <%= bike.errors.full_messages.to_sentence.capitalize %>
     </div>
   <% end %>
 
-  <%= f.input :name, input_html: { autofocus: true } %>
-  <%= f.submit class: "btn btn--secondary" %>
+  <%= f.input :name, input_html: { autofocus: true , placeholder: "Name"} %>
+  <%= f.input :make, input_html: { placeholder: "Make"} %>
+  <%= f.input :model, input_html: { placeholder: "Model"} %>
+  <%= f.input :year, input_html: { placeholder: "Year"} %>
+  <%= f.input :description, input_html: { placeholder: "Description"} %>
+  <%= f.input :serial_number, input_html: { placeholder: "Serial no"} %>
 <% end %>

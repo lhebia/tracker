@@ -3,9 +3,15 @@
 
   <div class="header">
     <h1>New bike</h1>
-    <%= link_to "Cancel", 
-        bikes_path, 
-        class: "btn btn--light" %>
+    <div class="bike__actions">
+      <%= link_to "Cancel", 
+          bikes_path, 
+          class: "btn btn--light" %>
+      <input type="submit" 
+        value="Submit" 
+        class="btn btn--secondary" 
+        form="bike-form">
+    </div>
   </div>
 
   <%= render "form", bike: @bike %>

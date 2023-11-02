@@ -1,6 +1,11 @@
 <div class="bike">
-  <%= link_to bike.name, 
-    bike_path(bike) %>
+  <div>
+    <span>
+      <strong><%= link_to bike.name, 
+        bike_path(bike) %></strong> --
+      <span><%= bike.year %> <%= bike.make %> <%= bike.model%></span>
+    </span>
+  </div>
   <div class="bike__actions">
     <%= link_to "View",
       bike_path(bike),

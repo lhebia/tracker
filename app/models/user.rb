@@ -6,4 +6,5 @@ class User < ApplicationRecord
   devise :database_authenticatable,:validatable
 
   has_many :bikes, dependent: :destroy
+  has_many :rides, dependent: :destroy
 end

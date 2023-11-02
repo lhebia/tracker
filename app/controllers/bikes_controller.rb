@@ -18,7 +18,6 @@ class BikesController < ApplicationController
     if @bike.save
       respond_to do |format|
         format.html { redirect_to bikes_path, notice: "Bike was successfully created." }
-        format.turbo_stream
       end
     else
       render :new, status: :unprocessable_entity
@@ -41,7 +40,6 @@ class BikesController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to quotes_path, notice: "Bike was successfully destroyed." }
-      format.turbo_stream
     end
   end
 

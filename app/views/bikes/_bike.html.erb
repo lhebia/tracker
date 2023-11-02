@@ -1,16 +1,13 @@
-<%= turbo_frame_tag dom_id(bike) do %>
-  <div class="bike">
-    <%= link_to bike.name, 
+<div class="bike">
+  <%= link_to bike.name, 
+    bike_path(bike) %>
+  <div class="bike__actions">
+    <%= button_to "Delete",
       bike_path(bike),
-      data: { turbo_frame: "_top" } %>
-    <div class="bike__actions">
-      <%= button_to "Delete",
-        bike_path(bike),
-        method: :delete,
-        class: "btn btn--light" %>
-      <%= link_to "Edit",
-        edit_bike_path(bike),
-        class: "btn btn--light" %>
-    </div>
+      method: :delete,
+      class: "btn btn--light" %>
+    <%= link_to "Edit",
+      edit_bike_path(bike),
+      class: "btn btn--light" %>
   </div>
-<% end %>
+</div>

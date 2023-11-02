@@ -1,10 +1,10 @@
 <header class="navbar">
   <% if user_signed_in? %>
     <div class="navbar__brand">
-      Veloholic
+      <p>Veloholic <span role="img">🚴</span></p>
     </div>
     <div class="navbar__name">
-      <p><%= current_user.username %></p>
+      <p><span role="img">👨🏻‍💻</span> <%= current_user.username %></p>
     </div>
     <%= button_to "Sign out",
       destroy_user_session_path,

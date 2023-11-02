@@ -4,7 +4,7 @@
       Veloholic
     </div>
     <div class="navbar__name">
-      Current user name
+      <p><%= current_user.username %></p>
     </div>
     <%= button_to "Sign out",
       destroy_user_session_path,

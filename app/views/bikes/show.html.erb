@@ -4,5 +4,15 @@
     <h1>
       <%= @bike.name %>
     </h1>
+    <div class="bike__actions">
+      <%= button_to "Delete",
+        bike_path(@bike),
+        method: :delete,
+        data: { turbo_confirm: "Are you sure?" },
+        class: "btn btn--light" %>
+      <%= link_to "Edit",
+        edit_bike_path(@bike),
+        class: "btn btn--light" %>
+    </div>
   </div>
 </main>

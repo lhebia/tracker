@@ -2,9 +2,8 @@
   <%= link_to bike.name, 
     bike_path(bike) %>
   <div class="bike__actions">
-    <%= button_to "Delete",
+    <%= link_to "View",
       bike_path(bike),
-      method: :delete,
       class: "btn btn--light" %>
     <%= link_to "Edit",
       edit_bike_path(bike),

@@ -3,6 +3,15 @@
 
   <div class="header">
     <h1>Edit bike</h1>
+    <div class="bike__actions">
+      <%= button_to "Delete",
+        bike_path(@bike),
+        method: :delete,
+        class: "btn btn--light" %>
+      <%= link_to "Cancel", 
+        bike_path(@bike), 
+        class: "btn btn--light" %>
+    </div>
   </div>
 
   <%= render "form", bike: @bike %>

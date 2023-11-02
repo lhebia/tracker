@@ -40,7 +40,7 @@ class BikesController < ApplicationController
     @bike.destroy
 
     respond_to do |format|
-      format.html { redirect_to quotes_path, notice: "Bike was successfully destroyed." }
+      format.html { redirect_to bikes_path, notice: "Bike was successfully destroyed." }
     end
   end
 

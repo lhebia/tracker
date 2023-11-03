@@ -1,0 +1,20 @@
+<div class="ride__attribute">
+  <h2>
+    <span><%= ride.name %>, ride details</span>
+  </h2>
+  <p>
+    <strong>Start time</strong>: <span><%= ride.start_time %></span>
+  </p>
+  <p>
+    <strong>End time</strong>: <span><%= ride.end_time.present? ? ride.end_time : "--" %></span>
+  </p>
+  <p>
+    <strong>Distance</strong>: <span><%= ride.distance %> km</span>
+  </p>
+  <p>
+    <strong>Elevation</strong>: <span><%= ride.elevation %> m</span>
+  </p>
+  <p>
+    <strong>Description</strong>: <span><%= ride.description %></span>
+  </p>
+</div>

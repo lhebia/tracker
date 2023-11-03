@@ -1,5 +1,5 @@
 class BikesController < ApplicationController
-    before_action :set_bike, only: [:show, :edit, :update, :destroy]
+  before_action :set_bike, only: [:show, :edit, :update, :destroy]
 
   def index
     @bikes = Bike.for_user(current_user).ordered

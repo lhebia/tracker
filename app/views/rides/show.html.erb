@@ -1,0 +1,21 @@
+<main class="container">
+  <%= link_to sanitize("&larr; Back to rides"), rides_path %>
+  <div class="header">
+    <h1>
+      <%= @ride.name %>
+    </h1>
+    <div class="bike__actions">
+      <%= button_to "Delete",
+        ride_path(@ride),
+        method: :delete,
+        data: { turbo_confirm: "Are you sure?" },
+        class: "btn btn--light" %>
+      <%= link_to "Edit",
+        edit_ride_path(@ride),
+        class: "btn btn--light" %>
+    </div>
+  </div>
+  <div class="body">
+    <%= render "rides/ride_attribute", ride: @ride %>
+  </div>
+</main>

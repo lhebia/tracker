@@ -11,7 +11,7 @@ class RidesController < ApplicationController
   end
 
   def index
-    @rides = Ride.for_user(current_user)
+    @rides = Ride.for_user(current_user).ordered
   end
 
   def edit

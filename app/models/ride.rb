@@ -4,6 +4,8 @@ class Ride < ApplicationRecord
   
   validates :name, presence: true
 
+  scope :ordered, -> { order(date: :desc) }
+
   scope :for_user, -> (user) { where(user_id: user.id) }
 
   def duration_in_mins

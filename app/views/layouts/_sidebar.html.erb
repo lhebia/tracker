@@ -1,0 +1,19 @@
+<aside class="sidebar">
+  <ul class="sidebar__menu">
+    <li>
+      <span role="img">🙋🏻‍♂️</span>
+    </li>
+    <li>
+      <strong><%= current_user.username %></strong>
+    </li>
+    <li>
+      <%= link_to "Home", root_path, class: "btn btn--light" %>
+    </li>
+    <li>
+      <%= link_to "Rides", rides_path, class: "btn btn--light" %>
+    </li>
+    <li>
+      <%= link_to "Bikes", bikes_path, class: "btn btn--light" %>
+    </li>
+  </ul>
+</aside>

@@ -1,0 +1,33 @@
+.sidebar {
+  width: 30%;
+  min-width: 200px;
+  max-width: 220px;
+  display: flex;
+  justify-content: flex-end;
+
+  &__menu {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-xsmall);
+    margin-bottom: var(--space-m);
+    margin-top: var(--space-l);
+    padding: var(--space-m);
+    width: 220px;
+    height: 300px;
+
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    align-items: center;
+
+    li {
+      padding-bottom: var(--space-s);
+      width: 100%;
+      text-align: center;
+    }
+
+    a {
+      width: 100%;
+    }
+  }
+}

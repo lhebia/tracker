@@ -1,6 +1,8 @@
 <main class="container">
-  <h1>Veloholic</h1>
-  <p>Velo addicts unite and share their passion</p>
+  <div class="home">
+    <h1>Veloholic</h1>
+    <p>Velo addicts unite and share their passion</p>
+  </div>
 
   <% if user_signed_in? %>
     <%= link_to "View bikes", bikes_path, class: "btn btn--dark" %>

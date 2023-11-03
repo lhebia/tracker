@@ -13,8 +13,15 @@
       method: :delete,
       class: "btn btn--dark" %>
   <% else %>
-    <%= link_to "Sign in",
-      new_user_session_path,
-      class: "btn btn--dark navbar__right" %>
+    <div class="navbar__brand">
+      <%= link_to "/" do %>
+        <p>Veloholic <span role="img">🚴</span></p>
+      <% end %>
+    </div>
+    <div class="navbar__name">
+      <%= link_to "Sign in",
+        new_user_session_path,
+        class: "btn btn--dark navbar__right" %>
+    </div>
   <% end %>
 </header>

@@ -1,7 +1,9 @@
 <header class="navbar">
   <% if user_signed_in? %>
     <div class="navbar__brand">
-      <p>Veloholic <span role="img">🚴</span></p>
+      <%= link_to "/" do %>
+        <p>Veloholic <span role="img">🚴</span></p>
+      <% end %>
     </div>
     <div class="navbar__name">
       <p><span role="img">👨🏻‍💻</span> <%= current_user.username %></p>

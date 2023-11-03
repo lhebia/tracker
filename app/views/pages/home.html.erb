@@ -4,6 +4,7 @@
 
   <% if user_signed_in? %>
     <%= link_to "View bikes", bikes_path, class: "btn btn--dark" %>
+    <%= link_to "View rides", rides_path, class: "btn btn--dark" %>
   <% else %>
     <%= link_to "Sign in", new_user_session_path, class: "btn btn--dark" %>
   <% end %>

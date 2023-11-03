@@ -1,0 +1,17 @@
+<div class="ride">
+  <div>
+    <span>
+      <strong><%= link_to ride.name, 
+        ride_path(ride) %></strong> --
+      <span><%= ride.date %>, <%= ride.distance %>km</span>, <%= ride.elevation %>m, <%= ride.duration_in_mins %> mins
+    </span>
+  </div>
+  <div class="ride__actions">
+    <%= link_to "View",
+      ride_path(ride),
+      class: "btn btn--light" %>
+    <%= link_to "Edit",
+      edit_ride_path(ride),
+      class: "btn btn--light" %>
+  </div>
+</div>

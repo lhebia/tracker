@@ -1,0 +1,18 @@
+<main class="container">
+  <%= link_to sanitize("&larr; Back to rides"), rides_path %>
+
+  <div class="header">
+    <h1>New ride</h1>
+    <div class="ride__actions">
+      <%= link_to "Cancel", 
+          rides_path, 
+          class: "btn btn--light" %>
+      <input type="submit" 
+        value="Submit" 
+        class="btn btn--secondary" 
+        form="ride-form">
+    </div>
+  </div>
+
+  <%= render "form", ride: @ride, bikes: @bikes %>
+</main>

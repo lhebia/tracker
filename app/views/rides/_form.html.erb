@@ -1,0 +1,16 @@
+<%= simple_form_for ride, html: { class: "form", id: "ride-form" } do |f| %>
+  <% if ride.errors.any? %>
+    <div class="error-message">
+      <%= ride.errors.full_messages.to_sentence.capitalize %>
+    </div>
+  <% end %>
+
+  <%= f.input :name, input_html: { autofocus: true , placeholder: "Name"} %>
+  <%= f.input :date, html5: true %>
+  <%= f.input :start_time, label: "Start time", html5: true %>
+  <%= f.input :end_time, label: "End time", html5: true %>
+  <%= f.input :distance, input_html: { placeholder: "200 (distance in km)"} %>
+  <%= f.input :elevation, input_html: { placeholder: "120 (elevation in m)"} %>
+  <%= f.input :description, input_html: { placeholder: "Description"} %>
+  <%= f.input :bike_id, collection: bikes, selected: ride.bike_id.present? ? ride.bike_id : 1 %>
+<% end %>

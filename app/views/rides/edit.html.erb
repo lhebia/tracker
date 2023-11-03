@@ -1,0 +1,23 @@
+<main class="container">
+  <%= link_to sanitize("&larr; Back to ride"), ride_path(@ride) %>
+
+  <div class="header">
+    <h1>Edit ride</h1>
+    <div class="ride__actions">
+      <%= button_to "Delete",
+        ride_path(@ride),
+        method: :delete,
+        data: { turbo_confirm: "Are you sure?" },
+        class: "btn btn--light" %>
+      <%= link_to "Cancel", 
+        ride_path(@ride), 
+        class: "btn btn--light" %>
+      <input type="submit" 
+        value="Submit" 
+        class="btn btn--secondary" 
+        form="ride-form">
+    </div>
+  </div>
+
+  <%= render "form", ride: @ride, bikes: @bikes %>
+</main>

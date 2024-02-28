@@ -57,6 +57,9 @@ gem "bootsnap", require: false
 # Authentication using Devise: https://github.com/heartcombo/devise
 gem "devise", "~> 4.8.1"
 
+# This library provides integration of the money gem with Rails.
+gem 'money-rails', '~> 1.12'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]

@@ -1,0 +1,18 @@
+<main class="container">
+  <%= link_to sanitize("&larr; Back to user"), user_path(@user) %>
+
+  <div class="header">
+    <h1>Edit user</h1>
+    <div class="resource__actions">
+      <%= link_to "Cancel", 
+        user_path(@user), 
+        class: "btn btn--light" %>
+      <input type="submit" 
+        value="Submit" 
+        class="btn btn--secondary" 
+        form="user-form">
+    </div>
+  </div>
+
+  <%= render "form", user: @user %>
+</main>

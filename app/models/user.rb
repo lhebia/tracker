@@ -7,4 +7,8 @@ class User < ApplicationRecord
 
   has_many :bikes, dependent: :destroy
   has_many :rides, dependent: :destroy
+
+  def full_name
+    first_name.capitalize + " " + last_name.capitalize
+  end
 end

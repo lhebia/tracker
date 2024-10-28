@@ -1,0 +1,16 @@
+<main class="container">
+  <div class="header">
+    <h1>
+      <%= @user.full_name %>
+    </h1>
+    <div class="resource__actions">
+      <%= link_to "Edit",
+        edit_user_path(@user),
+        class: "btn btn--light" %>
+    </div>
+  </div>
+  <div class="body">
+    <%= render "users/user_attribute", user: @user %>
+  </div>
+</main>
+

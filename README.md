@@ -1,4 +1,12 @@
 # README
+An evergreen application to test all of the things I want to learn about Rails.
+
+## Dependencies
+- `Ruby 3.0.1`
+- `Rails 7.1.4.2`
+- `node v20.198.0`
+- `esbuild 0.24.0` via `npm`
+- `sass 1.65.1` via `npm`
 
 ### Start up
 To setup server and create database.

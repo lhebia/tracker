@@ -18,4 +18,8 @@ To start environment
 To run tests
 - `bin/rails test`
 
+Debugging
+- Create break points with `debugger`
+- Attach to process with `rdbg --attach`
+
 Project is running at: http://localhost:3000/

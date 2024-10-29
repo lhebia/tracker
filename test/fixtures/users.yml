@@ -8,7 +8,7 @@ user1:
   id: 1
   email: user1@lhebia.com
   first_name: Test
-  last_name: User
+  last_name: User1
   encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
   account_id: 1
 
@@ -16,7 +16,7 @@ user2:
   id: 2
   email: user2@lhebia.com
   first_name: Test
-  last_name: User
+  last_name: User2
   encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
   account_id: 1
 
@@ -24,6 +24,6 @@ user3:
   id: 3
   email: user3@lhebia.com
   first_name: Test
-  last_name: User
+  last_name: User3
   encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
   account_id: 1

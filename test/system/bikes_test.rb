@@ -9,7 +9,7 @@ class BikesTest < ApplicationSystemTestCase
 
   test "Showing a bike" do
     visit bikes_path
-    click_link @bike.name 
+    click_link @bike.name
 
     assert_selector "h1", text: @bike.name
   end

@@ -6,7 +6,7 @@ first:
   model: Tarmac SL7
   description: One bike to rule them all
   serial_number: 1
-  user: user1
+  user_id: 1
   year: 2023
 
 second:
@@ -15,7 +15,7 @@ second:
   model: CAAD10
   description: Something something bike
   serial_number: 2
-  user: user1
+  user_id: 1
   year: 2010
 
 third:
@@ -24,5 +24,5 @@ third:
   model: Soloist
   description: Do it all race bike
   serial_number: 3
-  user: user1
+  user_id: 1
   year: 2023

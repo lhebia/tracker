@@ -26,6 +26,7 @@ class UsersController < ApplicationController
       :first_name,
       :last_name,
       :username,
+      :avatar
     )
   end
 

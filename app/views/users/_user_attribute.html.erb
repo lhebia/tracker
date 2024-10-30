@@ -1,4 +1,5 @@
 <div class="resource__attribute">
+  <%= image_tag user.avatar.variant(:thumb) if user.avatar.attached? %>
   <h2>
     <span><%= user.username %></span>
   </h2>

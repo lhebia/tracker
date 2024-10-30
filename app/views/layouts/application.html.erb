@@ -14,15 +14,21 @@
   <body>
     <%= render "layouts/navbar" %>
     <% flash.each do |key, value| %>
-      <div class="alert alert-<%= key %>">
-        <%= value %>
+      <div class="w-100 flex justify-center">
+        <div class="alert alert-<%= key %>">
+          <%= value %>
+        </div>
       </div>
     <% end %>
-    <div class="application__container">
-      <% if user_signed_in? %>
-        <%= render "layouts/sidebar" %>
-      <% end %>
-      <%= yield %>
+    <div class="flex justify-center">
+      <div class="w-4/5 max-w-4xl flex">
+        <% if user_signed_in? %>
+            <%= render "layouts/sidebar" %>
+          <% end %>
+        <div class="application__container flex-col">
+          <%= yield %>
+        </div>
+      </div>
     </div>
   </body>
 </html>

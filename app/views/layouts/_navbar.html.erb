@@ -1,27 +1,29 @@
-<header class="navbar">
-  <% if user_signed_in? %>
-    <div class="navbar__brand">
-      <%= link_to "/" do %>
-        <p>Veloholic <span role="img">🚴</span></p>
-      <% end %>
-    </div>
-    <div class="navbar__name">
-      <p><span role="img">👨🏻‍💻</span> <%= current_user.username %></p>
-    </div>
-    <%= button_to "Sign out",
-      destroy_user_session_path,
-      method: :delete,
-      class: "btn btn--dark" %>
-  <% else %>
-    <div class="navbar__brand">
-      <%= link_to "/" do %>
-        <p>Veloholic <span role="img">🚴</span></p>
-      <% end %>
-    </div>
-    <div class="navbar__name">
-      <%= link_to "Sign in",
-        new_user_session_path,
-        class: "btn btn--dark navbar__right" %>
-    </div>
-  <% end %>
+<header class="navbar justify-center">
+  <div class="w-4/5 max-w-4xl flex items-center">
+    <% if user_signed_in? %>
+      <div class="navbar__brand">
+        <%= link_to "/" do %>
+          <p>Veloholic <span role="img">🚴</span></p>
+        <% end %>
+      </div>
+      <div class="navbar__name">
+        <p><span role="img">👨🏻‍💻</span> <%= current_user.username %></p>
+      </div>
+      <%= button_to "Sign out",
+        destroy_user_session_path,
+        method: :delete,
+        class: "btn btn--dark" %>
+    <% else %>
+      <div class="navbar__brand">
+        <%= link_to "/" do %>
+          <p>Veloholic <span role="img">🚴</span></p>
+        <% end %>
+      </div>
+      <div class="navbar__name">
+        <%= link_to "Sign in",
+          new_user_session_path,
+          class: "btn btn--dark navbar__right" %>
+      </div>
+    <% end %>
+  </div>
 </header>

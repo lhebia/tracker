@@ -13,7 +13,7 @@ class UsersController < ApplicationController
 
   def update
     if @user.update(user_params)
-      redirect_to user_path(@user.id), notice: "Ride was successfully updated."
+      redirect_to user_path(@user.id), notice: "User was successfully updated."
     else
       render :edit, status: :unprocessable_entity
     end

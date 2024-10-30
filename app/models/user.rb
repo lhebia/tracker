@@ -10,11 +10,10 @@ class User < ApplicationRecord
   has_many :bikes, dependent: :destroy
   has_many :rides, dependent: :destroy
 
-  validates_presence_of :first_name
-  validates_presence_of :last_name
   validates_uniqueness_of :email
 
   def full_name
+    return "User" if first_name.nil? || last_name.nil?
     first_name.capitalize + " " + last_name.capitalize
   end
 end

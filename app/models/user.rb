@@ -9,7 +9,6 @@ class User < ApplicationRecord
   has_many :rides, dependent: :destroy
 
   validates_uniqueness_of :email
-  validates_uniqueness_of :username
 
   def full_name
     return "User" if first_name.nil? || last_name.nil?

@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   resources :rides
 
   resources :users, only: [:index, :show, :edit, :update]
+
+  resources :vendors
 end

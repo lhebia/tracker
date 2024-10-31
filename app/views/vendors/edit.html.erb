@@ -1,0 +1,23 @@
+<main class="container">
+  <%= link_to sanitize("&larr; Back to vendor"), vendor_path(@vendor) %>
+
+  <div class="header">
+    <h1>Edit vendor</h1>
+    <div class="ride__actions">
+      <%= button_to "Delete",
+        vendor_path(@vendor),
+        method: :delete,
+        data: { turbo_confirm: "Are you sure?" },
+        class: "btn btn--light" %>
+      <%= link_to "Cancel", 
+        vendor_path(@vendor), 
+        class: "btn btn--light" %>
+      <input type="submit" 
+        value="Submit" 
+        class="btn btn--secondary" 
+        form="vendor-form">
+    </div>
+  </div>
+
+  <%= render "form", vendor: @vendor %>
+</main>

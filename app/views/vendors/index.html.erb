@@ -1,0 +1,10 @@
+<main class="container">
+  <div class="header">
+    <h1>Vendors</h1>
+    <%= link_to "New vendor",
+      new_vendor_path,
+      class: "btn btn--primary" %>
+  </div>
+
+  <%= render @vendors %>
+</main>

@@ -1,0 +1,17 @@
+<div class="ride">
+  <div>
+    <span>
+      <strong><%= link_to vendor.name, 
+        vendor_path(vendor) %></strong> --
+      <span><%= vendor.description %>, <%= vendor.postal_code %></span>
+    </span>
+  </div>
+  <div class="ride__actions">
+    <%= link_to "View",
+      vendor_path(vendor),
+      class: "btn btn--light" %>
+    <%= link_to "Edit",
+      edit_vendor_path(vendor),
+      class: "btn btn--light" %>
+  </div>
+</div>

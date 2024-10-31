@@ -1,0 +1,11 @@
+<%= simple_form_for vendor, html: { class: "form", id: "vendor-form" } do |f| %>
+  <% if vendor.errors.any? %>
+    <div class="error-message">
+      <%= vendor.errors.full_messages.to_sentence.capitalize %>
+    </div>
+  <% end %>
+
+  <%= f.input :name, input_html: { autofocus: true , placeholder: "Name"} %>
+  <%= f.input :description, input_html: { placeholder: "A short description about the vendor"} %>
+  <%= f.input :postal_code, input_html: { placeholder: "L2N X2Z"} %>
+<% end %>

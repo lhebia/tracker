@@ -1,0 +1,21 @@
+<main class="container">
+  <%= link_to sanitize("&larr; Back to vendors"), vendors_path %>
+  <div class="header">
+    <h1>
+      <%= @vendor.name %>
+    </h1>
+    <div class="bike__actions">
+      <%= button_to "Delete",
+        vendor_path(@vendor),
+        method: :delete,
+        data: { turbo_confirm: "Are you sure?" },
+        class: "btn btn--light" %>
+      <%= link_to "Edit",
+        edit_vendor_path(@vendor),
+        class: "btn btn--light" %>
+    </div>
+  </div>
+  <div class="body">
+    <%= render "vendors/vendor_attribute", vendor: @vendor %>
+  </div>
+</main>

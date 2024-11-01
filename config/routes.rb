@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   resources :rides
 
-  resources :transactions
+  resources :purchase_transactions
 
   resources :users, only: [:index, :show, :edit, :update]
 

@@ -3,7 +3,7 @@ class RidesController < ApplicationController
 
   def new
     @ride = Ride.new(user: current_user)
-    @bikes = Bike.for_user(current_user)
+    @bikes = Bike.for_user(current_user).order_by_usage
   end
 
   def show

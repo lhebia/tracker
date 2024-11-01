@@ -4,12 +4,11 @@ class Bike < ApplicationRecord
   has_many :rides
   
   validates :name, presence: true
-
   validates :year, format: { with: /\A(19|20)\d{2}\z/,
     message: 'Must be a valid year' }
 
   scope :ordered, -> { order(id: :desc) }
-
+  scope :order_by_usage, -> { order(rides_count: :desc) }
   scope :for_user, -> (user) { where(user_id: user.id) }
 
   # Could possiby use this once I set up a type of "feed"

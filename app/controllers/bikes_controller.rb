@@ -2,7 +2,7 @@ class BikesController < ApplicationController
   before_action :set_bike, only: [:show, :edit, :update, :destroy]
 
   def index
-    @bikes = Bike.for_user(current_user).ordered
+    @bikes = Bike.for_user(current_user).order_by_usage
   end
 
   def show

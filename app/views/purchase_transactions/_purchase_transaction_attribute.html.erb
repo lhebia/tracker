@@ -1,0 +1,20 @@
+<div class="ride__attribute">
+  <h2>
+    <span><%= purchase_transaction.description %>, transaction details</span>
+  </h2>
+  <p>
+    <strong>Amount</strong>: <span>$<%= purchase_transaction.amount %></span>
+  </p>
+  <p>
+    <strong>Vendor</strong>: <span><%= purchase_transaction.vendor.name %></span>
+  </p>
+  <p>
+    <strong>Date</strong>: <span><%= purchase_transaction.date %></span>
+  </p>
+  <p>
+    <strong>Description</strong>: <span><%= purchase_transaction.description %></span>
+  </p>
+  <p>
+    <strong>Source ID</strong>: <span><%= purchase_transaction.source_id %></span>
+  </p>
+</div>

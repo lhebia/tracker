@@ -1,0 +1,18 @@
+<main class="container">
+  <%= link_to sanitize("&larr; Back to purchase transactions"), purchase_transactions_path %>
+
+  <div class="header">
+    <h1>New purchase transaction</h1>
+    <div class="ride__actions">
+      <%= link_to "Cancel",
+          purchase_transactions_path,
+          class: "btn btn--light" %>
+      <input type="submit"
+        value="Submit"
+        class="btn btn--secondary"
+        form="purchase-transaction-form">
+    </div>
+  </div>
+
+  <%= render "form", purchase_transaction: @purchase_transaction, vendors: @vendors %>
+</main>

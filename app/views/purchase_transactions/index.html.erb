@@ -1,0 +1,10 @@
+<main class="container">
+  <div class="header">
+    <h1>Purchase transactions</h1>
+    <%= link_to "New purchase transaction",
+      new_purchase_transaction_path,
+      class: "btn btn--primary" %>
+  </div>
+
+  <%= render @purchase_transactions %>
+</main>

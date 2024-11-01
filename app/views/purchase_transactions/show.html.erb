@@ -1,0 +1,21 @@
+<main class="container">
+  <%= link_to sanitize("&larr; Back to purchase transactions"), purchase_transactions_path %>
+  <div class="header">
+    <h1>
+      <%= @purchase_transaction.description %>
+    </h1>
+    <div class="bike__actions">
+      <%= button_to "Delete",
+        purchase_transaction_path(@purchase_transaction),
+        method: :delete,
+        data: { turbo_confirm: "Are you sure?" },
+        class: "btn btn--light" %>
+      <%= link_to "Edit",
+        edit_purchase_transaction_path(@purchase_transaction),
+        class: "btn btn--light" %>
+    </div>
+  </div>
+  <div class="body">
+    <%= render "purchase_transactions/purchase_transaction_attribute", purchase_transaction: @purchase_transaction %>
+  </div>
+</main>

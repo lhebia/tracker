@@ -1,0 +1,17 @@
+<div class="ride">
+  <div>
+    <span>
+      <strong><%= link_to purchase_transaction.description, 
+        purchase_transaction_path(purchase_transaction) %></strong> --
+      <span><%= purchase_transaction.vendor.name %> -- $<%= purchase_transaction.amount %></span>
+    </span>
+  </div>
+  <div class="ride__actions">
+    <%= link_to "View",
+      purchase_transaction_path(purchase_transaction),
+      class: "btn btn--light" %>
+    <%= link_to "Edit",
+      edit_purchase_transaction_path(purchase_transaction),
+      class: "btn btn--light" %>
+  </div>
+</div>

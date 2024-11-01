@@ -1,0 +1,23 @@
+<main class="container">
+  <%= link_to sanitize("&larr; Back to purchase transactions"), purchase_transaction_path(@purchase_transaction) %>
+
+  <div class="header">
+    <h1>Edit transaction</h1>
+    <div class="ride__actions">
+      <%= button_to "Delete",
+        purchase_transaction_path(@purchase_transaction),
+        method: :delete,
+        data: { turbo_confirm: "Are you sure?" },
+        class: "btn btn--light" %>
+      <%= link_to "Cancel", 
+        purchase_transaction_path(@purchase_transaction), 
+        class: "btn btn--light" %>
+      <input type="submit" 
+        value="Submit" 
+        class="btn btn--secondary" 
+        form="purchase-transaction-form">
+    </div>
+  </div>
+
+  <%= render "form", purchase_transaction: @purchase_transaction, vendors: @vendors %>
+</main>

@@ -50,7 +50,7 @@ class VendorsController < ApplicationController
     params.require(:vendor).permit(
       :name,
       :description,
-      :post_code
+      :postal_code
     )
   end
 

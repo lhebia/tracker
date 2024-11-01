@@ -59,7 +59,8 @@ class RidesController < ApplicationController
       :distance,
       :elevation,
       :description,
-      :bike_id
+      :bike_id,
+      :coffees
     )
   end
 

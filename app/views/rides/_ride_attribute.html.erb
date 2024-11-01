@@ -6,10 +6,22 @@
     <strong>Date</strong>: <span><%= ride.date %></span>
   </p>
   <p>
+    <strong>Coffees consumed</strong>:
+    <% if ride.coffees.zero? %>
+      <span>😔</span>
+    <% else %>
+      <span>
+        <% ride.coffees.times do %>
+          <%= render "coffee" %>
+        <% end %>
+      </span>
+    <% end %>
+  </p>
+  <p>
     <strong>Bike</strong>: <span><%= bike.name %></span>
   </p>
   <p>
-    <strong>Start time</strong>: <span><%= ride.start_time %></span>
+    <strong>Start time</strong>: <span><%= ride.start_time.present? ? ride.start_time : "--" %></span>
   </p>
   <p>
     <strong>End time</strong>: <span><%= ride.end_time.present? ? ride.end_time : "--" %></span>

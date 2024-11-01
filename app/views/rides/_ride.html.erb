@@ -3,7 +3,15 @@
     <span>
       <strong><%= link_to ride.name, 
         ride_path(ride) %></strong> --
-      <span><%= ride.date %>, <%= ride.distance %>km</span>, <%= ride.elevation %>m, <%= ride.duration_in_mins %> mins
+      <span>
+        <% if ride.coffees.zero? %>
+          <span>😔</span>
+        <% else %>
+          <% ride.coffees.times do %>
+            <%= render "coffee" %>
+          <% end %>
+        <% end %>
+      </span>
     </span>
   </div>
   <div class="ride__actions">

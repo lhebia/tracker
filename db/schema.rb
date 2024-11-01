@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_10_31_140702) do
+ActiveRecord::Schema[7.1].define(version: 2024_10_31_195841) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -59,6 +59,20 @@ ActiveRecord::Schema[7.1].define(version: 2024_10_31_140702) do
     t.integer "year"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "purchase_transactions", force: :cascade do |t|
+    t.integer "amount_cents", default: 0, null: false
+    t.string "amount_currency", default: "USD", null: false
+    t.bigint "account_id", null: false
+    t.bigint "vendor_id"
+    t.date "date"
+    t.string "description"
+    t.string "source_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["account_id"], name: "index_purchase_transactions_on_account_id"
+    t.index ["source_id"], name: "index_purchase_transactions_on_source_id", unique: true
   end
 
   create_table "rides", force: :cascade do |t|
